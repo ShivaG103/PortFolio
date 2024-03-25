@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+    scrollbar-width: 4px;
+    scrollbar-color: #afb2bf;
+  }
+  
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    @apply bg-gradient-to-b from-blue-100 to-red-100
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: #afb2bf;
+    border-radius: 10px;
+    visibility: hidden;
+  }
+  
+  *:active::-webkit-scrollbar-thumb,
+  *:focus::-webkit-scrollbar-thumb,
+  *:hover::-webkit-scrollbar-thumb {
+    visibility: visible;
+  }
+
+  *::-webkit-scrollbar:horizontal {
+    height: 0;
+    width: 0;
+    display: none;
+  }
+  
+  *::-webkit-scrollbar-thumb:horizontal {
+    display: none;
+  }
+
+
+  .scrollb{
+    scrollbar-width:0px;
+  }
+  .scrollb::-webkit-scrollbar {
+    display:none;
+  }
