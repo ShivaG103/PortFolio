@@ -74,27 +74,23 @@ const PortfolioPage = () => {
         <div className="w-screen h-[calc(100vh-6rem)] flex flex-col gap-20 items-center justify-center text-8xl text-center">
           My Works
           <motion.svg
-              initial={{ opacity: 0.2, y: 0 }}
-              animate={{ opacity: 1, y: "10px" }}
-              transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              width={50}
-              height={50}
-            >
-              <path
-                d="M5 15C5 16.8565 5.73754 18.6371 7.05029 19.9498C8.36305 21.2626 10.1435 21.9999 12 21.9999C13.8565 21.9999 15.637 21.2626 16.9498 19.9498C18.2625 18.6371 19 16.8565 19 15V9C19 7.14348 18.2625 5.36305 16.9498 4.05029C15.637 2.73754 13.8565 2 12 2C10.1435 2 8.36305 2.73754 7.05029 4.05029C5.73754 5.36305 5 7.14348 5 9V15Z"
-                stroke="#000000"
-                strokeWidth="1"
-              ></path>
-              <path d="M12 6V14" stroke="#000000" strokeWidth="1"></path>
-              <path
-                d="M15 11L12 14L9 11"
-                stroke="#000000"
-                strokeWidth="1"
-              ></path>
-            </motion.svg>
+            initial={{ opacity: 0.2, y: 0 }}
+            animate={{ opacity: 1, y: "10px" }}
+            transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            width={50}
+            height={50}
+          >
+            <path
+              d="M5 15C5 16.8565 5.73754 18.6371 7.05029 19.9498C8.36305 21.2626 10.1435 21.9999 12 21.9999C13.8565 21.9999 15.637 21.2626 16.9498 19.9498C18.2625 18.6371 19 16.8565 19 15V9C19 7.14348 18.2625 5.36305 16.9498 4.05029C15.637 2.73754 13.8565 2 12 2C10.1435 2 8.36305 2.73754 7.05029 4.05029C5.73754 5.36305 5 7.14348 5 9V15Z"
+              stroke="#000000"
+              strokeWidth="1"
+            ></path>
+            <path d="M12 6V14" stroke="#000000" strokeWidth="1"></path>
+            <path d="M15 11L12 14L9 11" stroke="#000000" strokeWidth="1"></path>
+          </motion.svg>
         </div>
         <div className="sticky top-0 flex h-screen gap-4 items-center overflow-hidden">
           <motion.div style={{ x }} className="flex">
@@ -105,16 +101,41 @@ const PortfolioPage = () => {
                 key={item.id}
               >
                 <div className="flex flex-col sm:flex-row h-[704px] sm:h-fit justify-between gap-8 text-white">
-                  <div className='flex flex-col gap-8'>
-                    <h1 className="text-xl font-bold md:text-4xl lg:text-6xl xl:text-8xl">{item.title}</h1>
+                  <div className="flex flex-col gap-8">
+                    <h1 className="text-xl font-bold md:text-4xl lg:text-6xl xl:text-8xl">
+                      {item.title}
+                    </h1>
                     <div className="relative w-80 h-56 md:w-96 md:h-64 lg:w-[500px] lg:h-[350px] xl:w-[600px] xl:h-[420px]">
-                      <Image src={item.img} fill sizes="(max-width: 768px) 320px, (max-width:1024px) 384px, (max-width:1280px) 500px, 600px" alt={item.title} className='rounded-lg' />
+                      <Image
+                        src={item.img}
+                        fill
+                        sizes="(max-width: 768px) 320px, (max-width:1024px) 384px, (max-width:1280px) 500px, 600px"
+                        alt={item.title}
+                        className="rounded-lg"
+                      />
                     </div>
                   </div>
-                  <div className='flex flex-col gap-8 justify-end'>
-                    <p className="w-80 md:w-96 lg:w-[500px] lg:text-lg xl:w-[600px]">{item.desc}</p>
-                    <Link href={item.link} target='_blank' rel="noopener noreferrer" className="flex justify-end">
-                      <motion.button whileHover={{scale: 1.1, backgroundColor: '#4b5563', color:'rgb(255, 255, 255)'}} transition={{type:'spring', stiffness: 400}} className='p-2 text-sm md:p-4 md:text-md lg:p-8 lg:text-lg bg-white text-gray-600 font-semibold m-4 rounded'>See Demo</motion.button>
+                  <div className="flex flex-col gap-8 justify-end">
+                    <p className="w-80 md:w-96 lg:w-[500px] lg:text-lg xl:w-[600px]">
+                      {item.desc}
+                    </p>
+                    <Link
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex justify-end"
+                    >
+                      <motion.button
+                        whileHover={{
+                          scale: 1.1,
+                          backgroundColor: "#4b5563",
+                          color: "rgb(255, 255, 255)",
+                        }}
+                        transition={{ type: "spring", stiffness: 400 }}
+                        className="p-2 text-sm md:p-4 md:text-md lg:p-8 lg:text-lg bg-white text-gray-600 font-semibold m-4 rounded"
+                      >
+                        See Demo
+                      </motion.button>
                     </Link>
                   </div>
                 </div>
