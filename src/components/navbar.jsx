@@ -160,7 +160,7 @@ const Navbar = () => {
           transition={{ type: "spring", bounce: 0.75 }}
         >
           <Link
-            href="www.linkedin.com/in/shivamggggg"
+            href="https://www.linkedin.com/in/shivamggggg"
             target="_blank"
             rel="noopener noreferrer"
           >
