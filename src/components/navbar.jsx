@@ -208,7 +208,7 @@ const Navbar = () => {
             ))}
             <motion.div variants={listItemVariants}>
               <Link
-                href="/Shivam_MERN_Resume.pdf"
+                href="/shivam_mern_resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
               >
