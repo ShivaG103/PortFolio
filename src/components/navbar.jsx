@@ -106,11 +106,11 @@ const Navbar = () => {
             fontSize: "18px",
             textAlign: "center",
           }}
-          transition={{ type: "spring", bounce: 0.50 }}
+          transition={{ type: "spring", bounce: 0.5 }}
           className="w-fit text-center"
         >
           <Link
-            href="/Shivam_MERN_Resume.pdf"
+            href="/shivam_mern_resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
