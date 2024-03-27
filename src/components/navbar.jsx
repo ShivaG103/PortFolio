@@ -54,21 +54,20 @@ const Navbar = () => {
       transition: {
         when: "beforeChildren",
         staggerChildren: 0.2,
-      }
+      },
     },
   };
 
   const listItemVariants = {
     closed: {
       x: -10,
-      opacity:0,
+      opacity: 0,
     },
     opened: {
       x: 0,
-      opacity:1,
+      opacity: 1,
     },
-  }
-  
+  };
 
   return (
     <div className="h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl">
@@ -80,42 +79,95 @@ const Navbar = () => {
       </div>
 
       {/* Logo */}
-      <motion.div className="md:hidden lg:flex xl:w-1/3 xl:justify-center" initial={{rotateZ: 0, scale: 1}} whileHover={{rotateZ: "3deg", scale:1.2}} transition={{type:'spring', bounce: 0.75}}>
-        <Link
-          href="/"
-          className="text-sm bg-black rounded-md p-1 font-semibold flex items-center justify-center"
+      <div className="md:hidden lg:flex xl:w-1/3 xl:justify-center">
+        <motion.div
+          className="text-sm bg-black rounded-md p-1 font-semibold "
+          initial={{ rotateZ: 0, scale: 1 }}
+          whileHover={{ rotateZ: "3deg", scale: 1.2 }}
+          transition={{ type: "spring", bounce: 0.75 }}
         >
-          <span className="text-white mr-1">Shivam</span>
-          <span className="w-12 h-8 rounded bg-white text-black flex items-center justify-center">
-            Gupta
-          </span>
-        </Link>
-      </motion.div>
+          <Link href="/" className="flex items-center justify-center">
+            <span className="text-white mr-1">Shivam</span>
+            <span className="w-12 h-8 rounded bg-white text-black flex items-center justify-center">
+              Gupta
+            </span>
+          </Link>
+        </motion.div>
+      </div>
 
       {/* Socials */}
-      <motion.div className="hidden md:flex gap-4 w-1/3 justify-end" >
-        
-        <motion.span whileHover={{scale: 1.3}} transition={{type:'spring', bounce: 0.75}}>
-          <Link href="https://github.com/ShivaG103" target="_blank" rel="noopener noreferrer">
-              <Image src="/github.png" alt="" width={24} height={24} />
+      <div className="hidden md:flex items-center gap-4 w-1/3 justify-end">
+        <motion.span
+          whileHover={{
+            backgroundColor: "rgb(0,0,0)",
+            borderRadius: "4px",
+            color: "rgb(255, 255, 255)",
+            width: "4.8rem",
+            fontSize: "18px",
+            textAlign: "center",
+          }}
+          transition={{ type: "spring", bounce: 0.50 }}
+          className="w-fit text-center"
+        >
+          <Link
+            href="/Shivam_MERN_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Resume
           </Link>
         </motion.span>
-        <motion.span whileHover={{scale: 1.3}} transition={{type:'spring', bounce: 0.75}}>
-        <Link href="https://www.facebook.com/profile.php?id=100011206691840&mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer">
-          <Image src="/facebook.png" alt="" width={24} height={24} />
-        </Link>
+
+        <motion.span
+          whileHover={{ scale: 1.3 }}
+          transition={{ type: "spring", bounce: 0.75 }}
+        >
+          <Link
+            href="https://github.com/ShivaG103"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image src="/github.png" alt="" width={24} height={24} />
+          </Link>
         </motion.span>
-        <motion.span whileHover={{scale: 1.3}} transition={{type:'spring', bounce: 0.75}}>
-        <Link href="https://www.instagram.com/__shiva___gupta/?igsh=d2Y3Znk5YXNqdmlt" target="_blank" rel="noopener noreferrer">
-          <Image src="/instagram.png" alt="" width={24} height={24} />
-        </Link>
+        {/* <motion.span
+          whileHover={{ scale: 1.3 }}
+          transition={{ type: "spring", bounce: 0.75 }}
+        >
+          <Link
+            href="https://www.facebook.com/profile.php?id=100011206691840&mibextid=ZbWKwL"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image src="/facebook.png" alt="" width={24} height={24} />
+          </Link>
         </motion.span>
-        <motion.span whileHover={{scale: 1.3}} transition={{type:'spring', bounce: 0.75}}>
-        <Link href="www.linkedin.com/in/shivamggggg" target="_blank" rel="noopener noreferrer">
-          <Image src="/linkedin.png" alt="" width={24} height={24} />
-        </Link>
+        <motion.span
+          whileHover={{ scale: 1.3 }}
+          transition={{ type: "spring", bounce: 0.75 }}
+        >
+          <Link
+            href="https://www.instagram.com/__shiva___gupta/?igsh=d2Y3Znk5YXNqdmlt"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image src="/instagram.png" alt="" width={24} height={24} />
+          </Link>
+        </motion.span> */}
+
+        <motion.span
+          whileHover={{ scale: 1.3 }}
+          transition={{ type: "spring", bounce: 0.75 }}
+        >
+          <Link
+            href="www.linkedin.com/in/shivamggggg"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image src="/linkedin.png" alt="" width={24} height={24} />
+          </Link>
         </motion.span>
-      </motion.div>
+      </div>
 
       {/* responive menu */}
       <div className="md:hidden">
@@ -150,12 +202,19 @@ const Navbar = () => {
             className="absolute top-0 left-0 w-screen h-screen bg-black text-white flex flex-col items-center justify-center gap-8 text-4xl z-40"
           >
             {links.map((link, i) => (
-              <motion.div variants={listItemVariants} key={i} className=''>
-                <Link href={link.url} >
-                  {link.title}
-                </Link>
+              <motion.div variants={listItemVariants} key={i} className="">
+                <Link href={link.url}>{link.title}</Link>
               </motion.div>
             ))}
+            <motion.div variants={listItemVariants}>
+              <Link
+                href="/Shivam_MERN_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Resume
+              </Link>
+            </motion.div>
           </motion.div>
         )}
       </div>

@@ -12,21 +12,21 @@ const Homepage = () => {
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}
     >
-      <div className="h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 gap-20 overflow-y-scroll">
+      <div className="h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 gap-10 sm:gap-20 overflow-y-scroll">
         {/* Image container  */}
-        <div className="h-1/2 lg:h-full lg:w-1/2 relative">
+        <div className="h-2/5 sm:h-1/2 lg:h-full lg:w-1/2 relative">
           <Image src="/hero.png" alt="" fill className="object-contain" />
         </div>
 
         {/* text container  */}
         <div className="h-1/2 lg:h-full lg:w-1/2 flex flex-col gap-8 items-center justify-center">
           {/* title  */}
-          <h1 className="text-4xl md:text-6xl font-bold">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold">
             Coding the Future, Crafting Tomorrow's Digital World.
           </h1>
 
           {/* desc */}
-          <p className="md:xl">
+          <p className="text-sm sm:text-base">
             Step into my digital realm, where creativity meets cutting-edge
             technology. As a passionate developer with a flair for aesthetics,
             my portfolio is a testament to my dedication to crafting innovative
